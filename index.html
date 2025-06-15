@@ -3,9 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Paladar Negro</title>
 </head>
 <body>
+  <nav class="bg-gray-900 text-white fixed top-0 w-full shadow z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#page-top" class="text-xl font-bold">Paladar Negro</a>
+      <div class="hidden md:flex space-x-4">
+        <a href="#home" class="hover:text-yellow-400">Inicio</a>
+        <a href="#products" class="hover:text-yellow-400">Productos</a>
+        <a href="#contact" class="hover:text-yellow-400">Contacto</a>
+      </div>
+      <!-- Botón para móviles -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none">
+          ☰
+        </button>
+      </div>
+    </div>
+    <!-- Menú desplegable móvil -->
+    <div id="mobile-menu" class="hidden md:hidden mt-2 space-y-2">
+      <a href="#home" class="block hover:text-yellow-400">Inicio</a>
+      <a href="#products" class="block hover:text-yellow-400">Productos</a>
+      <a href="#contact" class="block hover:text-yellow-400">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Script simple para mostrar/ocultar menú móvil
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
   <h1>¡Bienvenido a Paladar Negro!</h1>
   <p>Este es el inicio del proyecto.</p>
 </body>
