@@ -108,6 +108,32 @@
     </div>
   </div>
 </section>
+<footer class="bg-gray-800 text-white py-8 mt-12">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+    
+    <!-- Logo o Nombre -->
+    <div>
+      <h2 class="text-2xl font-bold">Paladar Negro</h2>
+      <p class="text-sm text-gray-400">© <span id="year"></span> Paladar Negro. Todos los derechos reservados.</p>
+    </div>
+
+    <!-- Enlaces rápidos -->
+    <div class="space-x-4">
+      <a href="#home" class="hover:underline text-gray-300">Inicio</a>
+      <a href="#products" class="hover:underline text-gray-300">Productos</a>
+      <a href="#contact" class="hover:underline text-gray-300">Contacto</a>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="flex space-x-4">
+      <a href="https://www.instagram.com/paladar_negro_gourmet/" target="_blank" class="hover:text-pink-400 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
+          <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.1.1 1.7.2 2.1.4.5.2.8.4 1.1.8.3.3.5.7.8 1.1.2.4.3 1 .4 2.1.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.1-.2 1.7-.4 2.1-.2.5-.4.8-.8 1.1-.3.3-.7.5-1.1.8-.4.2-1 .3-2.1.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.1-.1-1.7-.2-2.1-.4-.5-.2-.8-.4-1.1-.8-.3-.3-.5-.7-.8-1.1-.2-.4-.3-1-.4-2.1C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.1.2-1.7.4-2.1.2-.5.4-.8.8-1.1.3-.3.7-.5 1.1-.8.4-.2 1-.3 2.1-.4C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1 5.9.2 5 .4 4.2.8 3.4 1.2 2.7 1.8 2 2.5.8 3.7.2 5.6.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.5.7 3.4 1.9 4.6s3.1 1.8 4.6 1.9c1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.5-.1 3.4-.7 4.6-1.9s1.8-3.1 1.9-4.6c.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.5-.7-3.4-1.9-4.6S18.4.2 16.9.1C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.3a4.1 4.1 0 110-8.2 4.1 4.1 0 010 8.2zm6.4-11.5a1.4 1.4 0 100 2.8 1.4 1.4 0 000-2.8z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
 <script>
   // Script simple para mostrar/ocultar menú móvil
   const menuBtn = document.getElementById('menu-btn');
@@ -115,6 +141,9 @@
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
+</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
