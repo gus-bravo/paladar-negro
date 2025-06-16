@@ -2,45 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./assets/css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./assets/css/style.css" rel="stylesheet">
   <title>Paladar Negro</title>
 </head>
 <body>
-  <nav class="bg-gray-900 text-white fixed top-0 w-full shadow z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="#page-top" class="text-xl font-bold">Paladar Negro</a>
-      <div class="hidden md:flex space-x-4">
-        <a href="#home" class="hover:text-yellow-400">Inicio</a>
-        <a href="#products" class="hover:text-yellow-400">Productos</a>
-        <a href="#contact" class="hover:text-yellow-400">Contacto</a>
+  <!-- Barra de navegacion -->
+  <nav aria-label="Barra de navegación" class="bg-gray-900 text-white fixed top-0 w-full shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#page-top" class="text-xl font-bold">Paladar Negro</a>
+
+        <!-- Menu escritorio -->
+        <div class="hidden md:flex space-x-4">
+          <a href="#home" class="hover:text-yellow-400">Inicio</a>
+          <a href="#products" class="hover:text-yellow-400">Productos</a>
+          <a href="#contact" class="hover:text-yellow-400">Contacto</a>
+        </div>
+
+        <!-- Botón menú móvil -->
+        <div class="md:hidden">
+          <button id="menu-btn" 
+                  aria-expanded="false" 
+                  aria-controls="mobile-menu" 
+                  aria-label="Abrir menú de navegación" 
+                  class="text-white focus:outline-none">
+               <i data-lucide="menu"></i>
+          </button>
+        </div>
       </div>
-      <!-- Botón para móviles -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="text-white focus:outline-none">
-          ☰
-        </button>
+
+      <!-- Menú móvil -->
+      <div id="nav-links" class="hidden md:hidden mt-2 space-y-2">
+        <a href="#home" class="block hover:text-yellow-400">Inicio</a>
+        <a href="#products" class="block hover:text-yellow-400">Productos</a>
+        <a href="#contact" class="block hover:text-yellow-400">Contacto</a>
       </div>
     </div>
-    <!-- Menú desplegable móvil -->
-    <div id="mobile-menu" class="hidden md:hidden mt-2 space-y-2">
-      <a href="#home" class="block hover:text-yellow-400">Inicio</a>
-      <a href="#products" class="block hover:text-yellow-400">Productos</a>
-      <a href="#contact" class="block hover:text-yellow-400">Contacto</a>
-    </div>
-  </div>
-</nav>
+  </nav>
+
 <header id="home" class="text-center bg-gray-900 text-white py-16 px-4">
   <img src="./assets/img/paladar-logo.png" alt="Logo Paladar Negro" class="mx-auto w-40 h-40 mb-6 rounded-full shadow-lg" />
   <h1 class="text-5xl font-bold mb-4">Paladar Negro</h1>
   <p class="text-xl mb-2">Comidas, fiambres, vinos y mucho más!</p>
-
   <hr class="w-32 border-t-2 border-white mx-auto my-6" />
-
   <p class="text-lg mb-4">¡Delivery sin cargo! 📞 4822-6446</p>
-
   <a href="https://www.instagram.com/paladar_negro_gourmet/" target="_blank"
      class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
     Seguinos en Instagram
@@ -134,12 +141,21 @@
     </div>
   </div>
 </footer>
+<script src="https://unpkg.com/lucide@latest"></script>
 <script>
-  // Script simple para mostrar/ocultar menú móvil
+  lucide.createIcons();
+</script>
+<script>
   const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-links');
+  let menuOpen = false;
+
   menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    navLinks.classList.toggle('hidden');
+    menuOpen = !menuOpen;
+
+    menuBtn.innerHTML = `<i data-lucide="${menuOpen ? 'x' : 'menu'}"></i>`;
+    lucide.createIcons();
   });
 </script>
 <script>

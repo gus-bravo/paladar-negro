@@ -1,0 +1,7 @@
+a:focus {
+  outline: 2px solid #fbbf24; /* amarillo */
+  outline-offset: 2px;
+}
+html {
+  scroll-behavior: smooth;
+}
