@@ -46,9 +46,10 @@
         </div>
       </div>
     </nav>
-
+    <!-- Header principal con logo, título, y llamada a la acción -->
     <header class="bg-gray-900 text-white text-center">
       <section id="home" class="pt-24 pb-16 px-4">
+        <!-- Logo con animación de escala al pasar el cursor -->
         <img
           src="./assets/img/paladar-logo.png"
           alt=""
@@ -77,60 +78,108 @@
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-3xl font-bold mb-8 text-center">Nuestras picadas</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div
-            class="overflow-hidden rounded-lg shadow transition transform hover:scale-105 hover:shadow-xl duration-300"
-          >
+          <article class="card-picada">
             <img
               src="./assets/img/paladar-picada1.jpg"
-              alt="Picada 1"
+              alt="Picada de salame y quesos"
+              loading="lazy"
               class="w-full h-64 object-cover"
             />
-          </div>
-          <div
-            class="overflow-hidden rounded-lg shadow transition transform hover:scale-105 hover:shadow-xl duration-300"
-          >
+            <div class="p-4 text-center">
+              <h3 class="mt-2 text-lg font-semibold text-gray-800">
+                Picada Tradicional
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Deliciosa combinación de quesos variados y salames artesanales,
+                ideal para compartir.
+              </p>
+            </div>
+          </article>
+          <article class="card-picada">
             <img
               src="./assets/img/paladar-picada2.jpg"
-              alt="Picada 2"
+              alt="Picada de jamones, quesos y salame"
+              loading="lazy"
               class="w-full h-64 object-cover"
             />
-          </div>
-          <div
-            class="overflow-hidden rounded-lg shadow transition transform hover:scale-105 hover:shadow-xl duration-300"
-          >
+            <div class="p-4 text-center">
+              <h3 class="mt-2 text-lg font-semibold text-gray-800">
+                Picada Clásica
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Variedad de jamones, quesos y salame, perfecta para los amantes
+                de los sabores tradicionales.
+              </p>
+            </div>
+          </article>
+          <article class="card-picada">
             <img
               src="./assets/img/paladar-picada3.jpg"
-              alt="Picada 3"
+              alt="Picada de quesos"
+              loading="lazy"
               class="w-full h-64 object-cover"
             />
-          </div>
-          <div
-            class="overflow-hidden rounded-lg shadow transition transform hover:scale-105 hover:shadow-xl duration-300"
-          >
+            <div class="p-4 text-center">
+              <h3 class="mt-2 text-lg font-semibold text-gray-800">
+                Selección de Quesos
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Exquisita mezcla de quesos artesanales para disfrutar en
+                cualquier ocasión.
+              </p>
+            </div>
+          </article>
+          <article class="card-picada">
             <img
               src="./assets/img/paladar-picada4.jpg"
-              alt="Picada 4"
+              alt="Picada de jamones, mortadela, panceta y quesos"
+              loading="lazy"
               class="w-full h-64 object-cover"
             />
-          </div>
-          <div
-            class="overflow-hidden rounded-lg shadow transition transform hover:scale-105 hover:shadow-xl duration-300"
-          >
+            <div class="p-4 text-center">
+              <h3 class="mt-2 text-lg font-semibold text-gray-800">
+                Picada Especial
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Jamones, mortadela, panceta y quesos combinados para una
+                experiencia gourmet.
+              </p>
+            </div>
+          </article>
+          <article class="card-picada">
             <img
               src="./assets/img/paladar-picada5.jpg"
-              alt="Picada 5"
+              alt="Picada de quesos, salame, jamon y pasas de uva"
+              loading="lazy"
               class="w-full h-64 object-cover"
             />
-          </div>
-          <div
-            class="overflow-hidden rounded-lg shadow transition transform hover:scale-105 hover:shadow-xl duration-300"
-          >
+            <div class="p-4 text-center">
+              <h3 class="mt-2 text-lg font-semibold text-gray-800">
+                Picada Dulce y Salada
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Quesos, salame, jamón y pasas de uva para un contraste de
+                sabores único.
+              </p>
+            </div>
+          </article>
+          <article class="card-picada">
             <img
               src="./assets/img/paladar-picada6.jpg"
-              alt="Picada 6"
+              alt="Picada de salame, jamón, quesos y aceitunas"
+              loading="lazy"
               class="w-full h-64 object-cover"
             />
-          </div>
+            <div class="p-4 text-center">
+              <h3 class="mt-2 text-lg font-semibold text-gray-800">
+                Picada Completa
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Salame, jamón, quesos y aceitunas para una combinación clásica y
+                deliciosa.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -238,6 +287,6 @@
       </div>
     </footer>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
