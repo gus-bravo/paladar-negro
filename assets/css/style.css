@@ -30,3 +30,9 @@ html {
 .fade-in {
   animation: fadeIn 0.5s ease-in forwards;
 }
+
+#contact {
+  position: relative;
+  padding-top: 80px; /* altura del header fijo */
+  margin-top: -80px; /* mismo valor pero negativo */
+}

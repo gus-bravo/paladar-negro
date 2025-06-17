@@ -15,7 +15,7 @@ menuBtn.addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
+  const form = document.getElementById("contact-form");
   const submitBtn = form.querySelector('button[type="submit"]');
   const formMessage = document.getElementById("form-message");
 
@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
     submitBtn.classList.add("animate-pulse");
     submitBtn.innerHTML =
       '<i data-lucide="send" class="w-4 h-4"></i> Enviando...';
+
+    // Inicializar iconos Lucide en el nuevo contenido del botón
+    if (window.lucide && typeof lucide.createIcons === "function") {
+      lucide.createIcons();
+    }
 
     // Mostrar mensaje de éxito con animación fade-in
     formMessage.textContent = "¡Formulario enviado con éxito!";
@@ -51,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       plausible("form_submission");
     }
 
-    // Netlify procesa el formulario, no usamos preventDefault()
+    // No hacemos preventDefault para que Netlify procese el formulario
   });
 });
 

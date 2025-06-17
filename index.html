@@ -3,9 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <title>Paladar Negro</title>
+
+    <!-- Estilos personalizados -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-YBWTD3HPTB"
@@ -16,12 +26,10 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-YBWTD3HPTB");
     </script>
-    <link href="./assets/css/style.css" rel="stylesheet" />
-    <title>Paladar Negro</title>
   </head>
+
   <body>
     <!-- Barra de navegación -->
     <nav
@@ -61,13 +69,14 @@
         </div>
       </div>
     </nav>
+
     <!-- Header principal con logo, título, y llamada a la acción -->
     <header class="bg-gray-900 text-white text-center">
       <section id="home" class="pt-24 pb-16 px-4">
         <!-- Logo con animación de escala al pasar el cursor -->
         <img
           src="./assets/img/paladar-logo.png"
-          alt=""
+          alt="Paladar Negro"
           role="presentation"
           aria-hidden="true"
           class="mx-auto w-40 h-40 mb-6 rounded-full shadow-lg transition-transform duration-500 hover:scale-105"
@@ -89,10 +98,12 @@
         </a>
       </section>
     </header>
+
     <!-- Sección de productos / Grilla de picadas -->
     <section id="products" class="py-12 bg-gray-100 scroll-mt-24">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-3xl font-bold mb-8 text-center">Nuestras picadas</h2>
+
         <!-- Grilla de picadas -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <!-- Picada Tradicional -->
@@ -113,6 +124,7 @@
               </p>
             </div>
           </article>
+
           <!-- Picada Clásica -->
           <article class="card-picada">
             <img
@@ -131,6 +143,7 @@
               </p>
             </div>
           </article>
+
           <!-- Picada de Quesos -->
           <article class="card-picada">
             <img
@@ -149,6 +162,7 @@
               </p>
             </div>
           </article>
+
           <!-- Picada Especial -->
           <article class="card-picada">
             <img
@@ -167,6 +181,7 @@
               </p>
             </div>
           </article>
+
           <!-- Picada Dulce y Salada -->
           <article class="card-picada">
             <img
@@ -185,6 +200,7 @@
               </p>
             </div>
           </article>
+
           <!-- Picada Completa -->
           <article class="card-picada">
             <img
@@ -206,18 +222,19 @@
         </div>
       </div>
     </section>
+
     <!-- Sección de contacto -->
     <section
       id="contact"
       class="max-w-6xl mx-auto my-12 px-4"
       aria-label="Sección de contacto y ubicación"
     >
-      <!-- Contenedor flexible para formulario y mapa (stack en mobile, side by side en desktop) -->
+      <!-- Contenedor flexible: formulario y mapa -->
       <div class="flex flex-col md:flex-row md:space-x-8 items-start">
         <!-- Formulario de contacto -->
         <form
-          id="formulario-contacto"
-          name="contacto"
+          id="contact-form"
+          name="contact"
           action="/thanks.html"
           method="post"
           data-netlify="true"
@@ -226,76 +243,88 @@
           class="md:w-1/2 bg-white p-6 rounded-lg shadow-lg"
           aria-label="Formulario de contacto"
         >
-          <input type="hidden" name="form-name" value="contacto" />
+          <!-- Campo oculto requerido por Netlify -->
+          <input type="hidden" name="form-name" value="contact" />
 
+          <!-- Campo honeypot para bots -->
           <p class="hidden">
-            <label
-              >Si sos un robot, dejá este campo vacío:
+            <label>
+              Si sos un robot, dejá este campo vacío:
               <input name="bot-field" />
             </label>
           </p>
+
           <h3 class="text-3xl mb-6 font-semibold text-center">¡Contactanos!</h3>
+
           <!-- Campo: Nombre -->
           <div class="mb-4">
-            <label for="nombre" class="block mb-1 font-medium">Nombre</label>
+            <label for="contact-name" class="block mb-1 font-medium"
+              >Nombre</label
+            >
             <input
               type="text"
               autocomplete="name"
-              id="nombre"
-              name="nombre"
+              id="contact-name"
+              name="name"
               placeholder="Ej: Juan Pérez"
               required
               minlength="2"
               maxlength="50"
               spellcheck="false"
-              aria-describedby="ayuda-nombre"
+              aria-describedby="help-name"
               pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$"
               title="Solo se permiten letras y espacios"
               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
-            <p id="ayuda-nombre" class="text-sm text-gray-500 mt-1">
+            <p id="help-name" class="text-sm text-gray-500 mt-1">
               Ingresá tu nombre completo.
             </p>
           </div>
-          <!-- Campo: Email -->
+
+          <!-- Campo: Correo -->
           <div class="mb-4">
-            <label for="email" class="block mb-1 font-medium">Email</label>
+            <label for="contact-email" class="block mb-1 font-medium"
+              >Correo electrónico</label
+            >
             <input
               type="email"
               autocomplete="email"
-              id="email"
+              id="contact-email"
               name="email"
               placeholder="ejemplo@dominio.com"
               required
               minlength="5"
               maxlength="100"
               spellcheck="false"
-              aria-describedby="ayuda-email"
+              aria-describedby="help-email"
               pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
               title="Por favor, ingresá un email válido, por ejemplo: usuario@dominio.com"
               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
-            <p id="ayuda-email" class="text-sm text-gray-500 mt-1">
-              Nunca compartiremos tu email con nadie.
+            <p id="help-email" class="text-sm text-gray-500 mt-1">
+              Nunca compartiremos tu correo con nadie.
             </p>
           </div>
+
           <!-- Campo: Mensaje -->
           <div class="mb-4">
-            <label for="mensaje" class="block mb-1 font-medium">Mensaje</label>
+            <label for="contact-message" class="block mb-1 font-medium"
+              >Mensaje</label
+            >
             <textarea
-              id="mensaje"
+              id="contact-message"
               autocomplete="off"
-              name="mensaje"
+              name="message"
               rows="4"
               placeholder="Escribí tu mensaje acá..."
               required
               minlength="10"
               maxlength="1000"
-              aria-describedby="ayuda-mensaje"
+              aria-describedby="help-message"
               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"
             ></textarea>
-            <p id="ayuda-mensaje" class="text-sm text-gray-500 mt-1">
+            <p id="help-message" class="text-sm text-gray-500 mt-1">
               Contanos qué necesitás o cómo podemos ayudarte.
             </p>
             <p
@@ -307,18 +336,22 @@
               ¡Mensaje enviado con éxito!
             </p>
           </div>
+
+          <!-- reCAPTCHA de Netlify -->
           <div data-netlify-recaptcha="true"></div>
+
           <!-- Botón de envío -->
           <button
             type="submit"
             class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition flex items-center justify-center gap-2"
           >
             <span class="flex items-center gap-2">
-              <i data-lucide="send" class="w-4 h-4"></i
-              ><span>Enviar</span></span
-            >
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Enviar</span>
+            </span>
           </button>
         </form>
+
         <!-- Mapa de ubicación -->
         <div
           class="md:w-1/2 mt-8 md:mt-0 p-6 rounded-lg overflow-hidden shadow-lg aspect-square max-w-md flex flex-col items-center"
@@ -327,6 +360,7 @@
           <h3 class="text-3xl mb-6 font-semibold text-center">
             ¡Vení a nuestro local!
           </h3>
+
           <!-- Mapa incrustado con iframe -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.839669845565!2d-58.39271928478293!3d-34.5910537804571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab69c1a06f3%3A0x6b1a1b1d0e2d4edb!2sAv.%20Santa%20Fe%202180%2C%20C1425%20CABA!5e0!3m2!1ses!2sar!4v1686823386699!5m2!1ses!2sar"
@@ -353,6 +387,7 @@
             reservados.
           </p>
         </div>
+
         <!-- Enlaces rápidos -->
         <div class="space-x-4">
           <a href="#home" class="hover:underline text-gray-300">Inicio</a>
@@ -361,6 +396,7 @@
           >
           <a href="#contact" class="hover:underline text-gray-300">Contacto</a>
         </div>
+
         <!-- Redes sociales -->
         <div class="flex space-x-4">
           <a
