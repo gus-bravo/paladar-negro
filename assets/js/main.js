@@ -38,6 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     formMessage.classList.add("fade-in");
 
+    // Enviar evento a Google Analytics si está cargado
+    if (window.gtag) {
+      gtag("event", "form_submission", {
+        event_category: "Formulario",
+        event_label: "Contacto Paladar Negro",
+      });
+    }
+
+    // Enviar evento a Plausible si está cargado
+    if (window.plausible) {
+      plausible("form_submission");
+    }
+
     // Netlify procesa el formulario, no usamos preventDefault()
   });
 });
