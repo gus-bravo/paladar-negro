@@ -17,19 +17,28 @@ menuBtn.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const submitBtn = form.querySelector('button[type="submit"]');
+  const formMessage = document.getElementById("form-message");
 
-  form.addEventListener("submit", () => {
-    // Si el formulario no es válido, el navegador muestra errores automáticamente
+  form.addEventListener("submit", (e) => {
     if (!form.checkValidity()) return;
 
-    // Deshabilitar el botón para evitar envíos múltiples
+    // Deshabilitar botón y mostrar animación pulsante
     submitBtn.disabled = true;
+    submitBtn.setAttribute("aria-disabled", "true");
     submitBtn.classList.add("animate-pulse");
     submitBtn.innerHTML =
       '<i data-lucide="send" class="w-4 h-4"></i> Enviando...';
 
-    // El formulario se envía normalmente, sin preventDefault()
-    // Netlify lo procesa y maneja el mensaje o redirección.
+    // Mostrar mensaje de éxito con animación fade-in
+    formMessage.textContent = "¡Formulario enviado con éxito!";
+    formMessage.classList.remove("hidden", "fade-in");
+
+    // Forzar reflow para reiniciar animación si ya estaba activa
+    void formMessage.offsetWidth;
+
+    formMessage.classList.add("fade-in");
+
+    // Netlify procesa el formulario, no usamos preventDefault()
   });
 });
 
