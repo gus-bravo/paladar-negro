@@ -1,5 +1,3 @@
-// footer.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const footerContent = `
     <div
@@ -42,12 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (footer) {
     footer.innerHTML = footerContent;
 
-  // Activar íconos de Lucide
-  if (window.lucide) lucide.createIcons();
+    // Actualizar año actual
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-  // Actualizar año actual
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
+    // Activar iconos Lucide
+    if (window.lucide) lucide.createIcons();
   }
 });
