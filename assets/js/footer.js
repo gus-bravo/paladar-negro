@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   // Insertar al final del <body>
-  document.body.insertAdjacentHTML("beforeend", footer);
+  document.querySelector("footer").innerHTML = footer;
 
   // Activar íconos de Lucide
   if (window.lucide) lucide.createIcons();

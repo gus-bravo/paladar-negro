@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   // Insertar al principio del <body>
-  document.querySelector("header").innerHTML = navbarHTML;
+  document.querySelector("header").innerHTML = navbar;
 
   // Activar íconos Lucide
   if (window.lucide) lucide.createIcons();
