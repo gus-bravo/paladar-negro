@@ -1,23 +1,28 @@
+/* ==== Accesibilidad: foco visible en enlaces ==== */
 a:focus {
   outline: 2px solid #fbbf24; /* amarillo */
   outline-offset: 2px;
 }
 
+/* ==== Scroll suave para anclas (#secciones) ==== */
 html {
   scroll-behavior: smooth;
 }
 
+/* ==== Estilo de tarjeta para las picadas ==== */
 .card-picada {
   overflow: hidden;
   border-radius: 0.5rem; /* rounded-lg */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); /* shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition duration-300 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); /* sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* transición suave */
 }
 
 .card-picada:hover {
-  transform: scale(1.05); /* hover:scale-105 */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); /* hover:shadow-xl */
+  transform: scale(1.05); /* agrandar al pasar el mouse */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra más intensa al hacer hover */
 }
+
+/* ==== Animación de entrada gradual (fade in) ==== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -31,6 +36,8 @@ html {
   animation: fadeIn 0.5s ease-in forwards;
 }
 
+/* ==== Ajuste de anclaje para sección de contacto ==== */
+/* Esto compensa la altura del header fijo al hacer scroll */
 #contact {
   position: relative;
   padding-top: 80px; /* altura del header fijo */
