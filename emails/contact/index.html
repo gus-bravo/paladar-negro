@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nuevo mensaje desde el formulario</title>
+  </head>
+  <body
+    style="
+      font-family: sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 20px;
+      color: #1f2937;
+    "
+  >
+    <div
+      style="
+        background-color: white;
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <!-- Logo de Paladar Negro -->
+      <img
+        src="https://paladar-negro-web.netlify.app/assets/img/paladar-logo.png"
+        alt="Paladar Negro"
+        style="display: block; margin: 0 auto 20px; max-height: 60px"
+      />
+
+      <!-- Título del mensaje -->
+      <h1 style="text-align: center; color: #4f46e5; font-size: 24px">
+        Nuevo mensaje desde el formulario
+      </h1>
+
+      <!-- Campo: Nombre del remitente -->
+      <div style="margin-bottom: 16px">
+        <label style="font-weight: bold; display: block; margin-bottom: 4px"
+          >Nombre</label
+        >
+        <span
+          style="
+            display: block;
+            background-color: #f9fafb;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+          "
+          >{{ name }}</span
+        >
+      </div>
+
+      <!-- Campo: Email del remitente -->
+      <div style="margin-bottom: 16px">
+        <label style="font-weight: bold; display: block; margin-bottom: 4px"
+          >Email</label
+        >
+        <span
+          style="
+            display: block;
+            background-color: #f9fafb;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+          "
+          >{{ email }}</span
+        >
+      </div>
+
+      <!-- Campo: Mensaje escrito por el usuario -->
+      <div style="margin-bottom: 16px">
+        <label style="font-weight: bold; display: block; margin-bottom: 4px"
+          >Mensaje</label
+        >
+        <span
+          style="
+            display: block;
+            background-color: #f9fafb;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+          "
+          >{{ message }}</span
+        >
+      </div>
+
+      <!-- Pie de página explicativo -->
+      <div
+        style="
+          text-align: center;
+          margin-top: 20px;
+          font-size: 12px;
+          color: #9ca3af;
+        "
+      >
+        Este mensaje fue enviado desde el formulario de contacto de Paladar
+        Negro.
+      </div>
+    </div>
+  </body>
+</html>
