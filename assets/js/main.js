@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const formMessage = document.getElementById("form-message");
 
   form.addEventListener("submit", (e) => {
-    if (!form.checkValidity()) return;
+    if (!form.checkValidity()) return; // Dejá que el navegador muestre errores si los hay
 
     // Deshabilita el botón y muestra animación de "Enviando..."
     submitBtn.disabled = true;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     submitBtn.innerHTML =
       '<i data-lucide="send" class="w-4 h-4"></i> Enviando...';
 
-    // Re-renderiza íconos si es necesario
+    // Re-renderiza íconos por si el ícono de "send" se agregó dinámicamente
     if (window.lucide && typeof lucide.createIcons === "function") {
       lucide.createIcons();
     }
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Muestra mensaje de éxito con animación
     formMessage.textContent = "¡Formulario enviado con éxito!";
     formMessage.classList.remove("hidden", "fade-in");
-    void formMessage.offsetWidth;
+    void formMessage.offsetWidth; // Reinicia la animación si ya estaba activa
     formMessage.classList.add("fade-in");
 
     // Enviar evento a Google Analytics
@@ -65,17 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
       plausible("form_submission");
     }
 
-    // Enviar los datos a Make
-    const formData = new FormData(form);
-    const plainData = Object.fromEntries(formData.entries());
-
-    fetch("https://hook.us2.make.com/bis2t6u3kpoh51nf2uzrjvfza9w7myk4", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(plainData),
-    });
-
-    // ⚠️ No usar preventDefault para que Netlify procese el form y redirija a /thanks.html
+    // No uso preventDefault porque quiero que Netlify lo procese
   });
 });
 
