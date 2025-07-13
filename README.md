@@ -1,4 +1,4 @@
-# Paladar Negro - Bootstrap Version
+# Paladar Negro
 
 A responsive website for _Paladar Negro_ built with Bootstrap 5.  
 The site content is in Spanish, targeting local users.
@@ -7,15 +7,19 @@ The site content is in Spanish, targeting local users.
 
 ## Project Structure
 
-paladar_negro/
-├── img/
+```
+paladar-negro/
+├── assets/
+│   └── img/
 └── index.html
+```
 
 ---
 
 ## About
 
-This project is a rebuild of the original _Paladar Negro_ website, transitioning from Tailwind CSS to Bootstrap to improve maintainability and leverage Bootstrap's components.
+This project was created in 2020 for _Paladar Negro_, a food business where I worked for a while.
+The aim was to build a clean, responsive site to present the brand and its products to local customers.
 
 ---
 
