@@ -7,7 +7,7 @@ The site content is in Spanish, targeting local users.
 
 ## Project Structure
 
-```
+```shell
 paladar-negro/
 ├── assets/
 │   └── img/
